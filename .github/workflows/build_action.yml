@@ -18,7 +18,7 @@ jobs:
     - run: |
         yarn install
         yarn build
-        sed '/index.js/d' ./gitignore
+        sed '/index.js/d' ./.gitignore
 
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:

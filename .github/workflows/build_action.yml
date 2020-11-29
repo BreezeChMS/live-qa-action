@@ -20,6 +20,10 @@ jobs:
         yarn build
         sed '/index.js/d' ./.gitignore
 
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply gitignore change
+
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
